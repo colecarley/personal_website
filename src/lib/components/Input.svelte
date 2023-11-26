@@ -9,7 +9,7 @@
   <input
     name={label}
     type="text"
-    class="border border-green p-2 bg-black"
+    class="border border-green p-2 bg-black rounded-lg"
     {value}
     on:input={onInput}
   />

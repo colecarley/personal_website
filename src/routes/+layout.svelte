@@ -2,10 +2,10 @@
   import Header from "./Header.svelte";
   import Footer from "./Footer.svelte";
   import "./styles.css";
-  import { range } from "lodash";
 </script>
 
 <div class="app">
+  <div class="absolute z-0 main"></div>
   <Header />
   <div class="m-6">
     <slot />

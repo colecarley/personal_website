@@ -5,6 +5,8 @@ export default {
     colors: {
       black: "#000000",
       green: "#4af626",
+      light: "#f4fbf1",
+      dark: "#182213",
     },
     screens: {
       sm: "640px",

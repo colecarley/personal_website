@@ -10,7 +10,7 @@
   <textarea
     {rows}
     name={label}
-    class="border border-green p-2 bg-black"
+    class="border border-green p-2 bg-black rounded-lg"
     {value}
     on:input={onInput}
   />

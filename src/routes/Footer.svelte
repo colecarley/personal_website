@@ -6,12 +6,13 @@
     <div class="flex flex-row justify-between gap-4">
       <a
         href="https://github.com/colecarley"
-        class="hover:bg-green hover:text-black hover:font-bold px-2"
-        >github
+        class="px-2 mx-2 hover:underline hover:font-bold"
+      >
+        github
       </a>
       <a
         href="https://www.linkedin.com/in/cole-carley-339110184/"
-        class="hover:bg-green hover:text-black hover:font-bold px-2"
+        class="px-2 mx-2 hover:underline hover:font-bold"
         >linkedin
       </a>
     </div>
