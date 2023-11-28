@@ -1,0 +1,43 @@
+{
+  "api": {
+    "backend": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "whyYouLittleLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "whyYouLittleLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_whyYouLittleLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "whyYouLittleLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_whyYouLittleLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "whyYouLittleLambda"
+        }
+      ]
+    }
+  }
+}
