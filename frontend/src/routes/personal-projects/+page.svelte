@@ -16,7 +16,7 @@
       url: "https://github.com/colecarley/huffman-compressor",
       name: "huffman data compressor",
       date: "sep, 2023",
-      description: `This data compressor was an excuse to learn Go, and practice some algorithms and data structures. The Huffman
+      description: `This data compressor was an excuse to learn Go and practice some algorithms and data structures. The Huffman
       algorithm is a beautiful lossless data compression algorithm that uses a binary tree (made from a frequency analysis and a min-heap) to compress data.`,
       skills: ["Go", "data compression", "algorithms", "data structures"],
     },
@@ -24,7 +24,7 @@
       url: "https://github.com/colecarley/perceptron",
       name: "perceptron",
       date: "oct, 2023",
-      description: `A simple perceptron written in C. As my first time diving into neural networks, I wanted to start simple, but stay close to the grain.
+      description: `A simple perceptron that emulates an AND gate written in C. As my first time diving into neural networks, I wanted to start simple, but stay close to the grain.
       I had to sit and figure out how gradient decent works, which was a fun challenge. I am currently working up some plans for a more complex neural network.
         `,
       skills: ["C", "neural networks", "machine learning"],

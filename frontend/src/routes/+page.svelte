@@ -3,6 +3,7 @@
   import Clamp from "$lib/components/Clamp.svelte";
   import Center from "$lib/components/Center.svelte";
   import { onMount } from "svelte";
+  import { Result, littleFetch } from "$lib/types/result";
   let messages = [
     "thank you for coming <3!",
     "I hope you enjoy your stay!",
@@ -37,13 +38,6 @@
       }
     }, 3000);
   }
-
-  onMount(async () => {
-    const response = await fetch("http://localhost:1701/", {
-      method: "GET",
-    });
-    const result = await response.text();
-  });
 </script>
 
 {#if notification}
