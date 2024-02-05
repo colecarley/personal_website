@@ -1,6 +1,6 @@
 import { Database } from "bun:sqlite";
-import { addNotesTable, notes } from "./notes/notes";
-import { addBlogsTable, blogs } from "./blogs/blogs";
+import { addNotesTable, notes } from "./routes/notes/notes";
+import { addBlogsTable, blogs } from "./routes/blogs/blogs";
 
 console.log("Hello from backend!");
 

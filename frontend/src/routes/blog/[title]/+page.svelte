@@ -8,9 +8,11 @@
   type Blog = {
     content: string;
   };
+
   let blog: Blog = {
     content: "",
   };
+
   onMount(async () => {
     const res = await fetch("http://localhost:1701/blogs", {
       method: "POST",

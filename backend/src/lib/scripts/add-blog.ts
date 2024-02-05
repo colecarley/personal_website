@@ -1,8 +1,8 @@
 import Database from "bun:sqlite";
-import { addBlogsTable } from "../blogs/blogs";
-import { addNotesTable } from "../notes/notes";
+import { addBlogsTable } from "../../routes/blogs/blogs";
+import { addNotesTable } from "../../routes/notes/notes";
 
-const filename = process.argv[2];
+const filename = process.argv.slice(2).join(" ");
 if (!filename) throw new Error("no filename provided");
 console.log(`adding blog ${filename} to database`);
 
@@ -11,16 +11,22 @@ const currentPath = import.meta.dir;
 const path =
   currentPath.split("backend")[0] + "backend/assets/blog-markdown/" + filename;
 const file = Bun.file(path);
-const content = await file.text();
+let content = await file.text();
 
 const title = filename.split(".")[0];
 
 const db = new Database("whyYouLittle.db", { create: true });
 
+
 addBlogsTable(db);
 addNotesTable(db);
 
+content = content.replace(/"/g, '\"\"');
+content = content.replace(/'/g, '\'\'');
+
+console.log(content);
+
 const query = db.prepare(
-  `INSERT INTO blogs VALUES ('${title}', '${date}', '${content}');`
+  `INSERT INTO blogs VALUES ("${title}", "${date}", "${content}");`
 );
 query.get();

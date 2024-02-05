@@ -9,6 +9,7 @@
   },
   "type": "module",
   "dependencies": {
+    "lodash": "^4.17.21",
     "twilio": "^4.19.0"
   }
 }
